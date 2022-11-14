@@ -1,5 +1,6 @@
 package com.skypro.employee.record;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 
 public class EmployeeRequest {
@@ -9,7 +10,7 @@ public class EmployeeRequest {
     private int salary;
 
     public String getFirstName() {
-        return firstName;
+        return StringUtils.capitalize(firstName);
     }
 
     public void setFirstName(String firstName) {
@@ -17,7 +18,7 @@ public class EmployeeRequest {
     }
 
     public String getLastName() {
-        return lastName;
+        return StringUtils.capitalize(lastName);
     }
 
     public void setLastName(String lastName) {
