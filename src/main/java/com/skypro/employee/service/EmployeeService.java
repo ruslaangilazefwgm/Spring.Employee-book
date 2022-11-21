@@ -61,4 +61,9 @@ public class EmployeeService {
         return employees.values().stream()
                 .filter(employee -> employee.getSalary() > d).collect(Collectors.toList());
     }
+
+    public Employee removeEmployee(int id) {
+        return employees.remove(id);
+    }
+
 }
